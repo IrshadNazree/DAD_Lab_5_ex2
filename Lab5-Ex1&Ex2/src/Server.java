@@ -13,12 +13,11 @@ public static void main(String[] args) {
 			System.out.println("Ready for request");
 	
 			while (true) {
-				
-		
 				Socket sc = ssc.accept();
 				ObjectInputStream ois = new ObjectInputStream(sc.getInputStream());
 				
 				ItemProduct itemP = (ItemProduct) ois.readObject();
+				System.out.println(itemP.getName() + " " + itemP.getPrice());
 				itemP.setItemProductID(1);
 							
 				ObjectOutputStream oos = new ObjectOutputStream(sc.getOutputStream());
