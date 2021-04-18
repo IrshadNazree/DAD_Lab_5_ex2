@@ -17,7 +17,7 @@ public static void main(String[] args) {
 				ObjectInputStream ois = new ObjectInputStream(sc.getInputStream());
 				
 				ItemProduct itemP = (ItemProduct) ois.readObject();
-				System.out.println(itemP.getName() + " " + itemP.getPrice());
+//				System.out.println(itemP.getName() + " " + itemP.getPrice());
 				itemP.setItemProductID(1);
 							
 				ObjectOutputStream oos = new ObjectOutputStream(sc.getOutputStream());
